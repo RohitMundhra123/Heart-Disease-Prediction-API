@@ -31,7 +31,7 @@ def predict():
     input_query2 = np.array([gender, age, hypertension,heart_disease, ever_married, work_type, residence_type, avg_glucose_level, bmi,smoking_status]).reshape(1, -1)
     result2 = model1.predict(input_query2)[0]
 
-    return jsonify({'heart disease':str(result)},{'heart stroke':str(result2)})
+    return jsonify({'heart disease':str(result)},{'heart n stroke':str(result2)})
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0",port=5000)
